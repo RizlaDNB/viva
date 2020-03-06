@@ -24,7 +24,7 @@ body {
     height: 4200px;
 
     background-color: #dedede;
-    background: url(../main_1170px.jpg) top no-repeat;
+    // background: url(../main_1170px.jpg) top no-repeat;
 }
 
 .container {
@@ -387,6 +387,8 @@ body {
 .news {
     padding-top: 42px;
 
+    background: url(../img/main/news/news_bg.jpg) top no-repeat;
+
     &__header {
         margin: 0;
         margin-bottom: 48px;
@@ -417,13 +419,30 @@ body {
 
         display: flex;
         flex-direction: column;
+
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+
+            width: 2px;
+            height: 90%;
+            background-color: #8a8f93;
+        }
     }
 
     &-item {
         margin-bottom: 30px;
 
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+
+        position: relative;
 
         &__img {
             width: 457px;
@@ -433,11 +452,165 @@ body {
                 width: 100%;
             }
         }
-        &__separator {
-            flex-shrink: 0;
-            width: 88px;
-        }
         &__description {
+            max-width: 457px;
+
+            &:nth-child(1) {
+                text-align: right;
+            }
+
+            a {
+                display: inline-block;
+                margin-bottom: 10px;
+
+
+                @include gotham-black();
+                text-transform: uppercase;
+                font-size: 21px;
+                color: #f01928;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+
+                    color: #630460;
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                margin: 0;
+                @include gotham-regular();
+                font-size: 16px;
+                color: #606060;
+            }
+
+            span {
+                @include gotham-light();
+                font-size: 14px;
+                color: #474747;
+            }
+        }
+        &__pointer {
+            position: absolute;
+            z-index: 5;
+
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
+
+    &-finisher {
+        margin: 0 auto;
+
+        margin-bottom: 50px;
+    }
+}
+
+.--pointer-selected {
+    top: 17px;
+    circle {
+        fill: #630460;
+        stroke: #630460;
+    }
+}
+
+
+
+.footer {
+    min-height: 416px;
+
+    background: url(../img/main/footer/footer_bg.jpg) center no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &-header {
+        margin-top: 50px;
+
+        color: #ffffff;
+        @include gotham-medium();
+        font-size: 18px;
+    }
+    &-social {
+        min-width: 546px;
+
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 1px solid #606060;
+
+            position: relative;
+
+            &:hover {
+                border: 1px solid #f01928;
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+
+                width: 22px;
+                height: 22px;
+
+                path {
+                    fill: #606060;
+                }
+                polygon {
+                    fill: #606060;
+                }
+
+                &:hover {
+                    path {
+                        fill: #f01928;
+                    }
+                    polygon {
+                        fill: #f01928;
+                    }
+                }
+            }
+        }
+    }
+    &-logo {}
+    &-address {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        p {
+            margin: 0;
+            @include gotham-light();
+            font-size: 16px;
+            color: #ffffff;
+            padding: 0 30px;
+
+            &:nth-child(1) {
+                border-right: 2px solid #f01928;
+            }
+
+            a {
+                font: inherit;
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+    &-copyrights {
+        span {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            color: #606060;
+        }
+    }
+
 }

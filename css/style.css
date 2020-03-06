@@ -194,8 +194,7 @@
 
 body {
   height: 4200px;
-  background-color: #dedede;
-  background: url(../main_1170px.jpg) top no-repeat; }
+  background-color: #dedede; }
 
 .container {
   max-width: 1140px;
@@ -419,7 +418,8 @@ body {
   background: url(../img/main/features/strength.png) center no-repeat; }
 
 .news {
-  padding-top: 42px; }
+  padding-top: 42px;
+  background: url(../img/main/news/news_bg.jpg) top no-repeat; }
   .news__header {
     margin: 0;
     margin-bottom: 48px;
@@ -441,16 +441,127 @@ body {
     max-width: 1005px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    position: relative; }
+    .news-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      width: 2px;
+      height: 90%;
+      background-color: #8a8f93; }
   .news-item {
     margin-bottom: 30px;
     display: flex;
-    justify-content: center; }
+    justify-content: space-between;
+    position: relative; }
     .news-item__img {
       width: 457px;
       flex-shrink: 0; }
       .news-item__img img {
         width: 100%; }
-    .news-item__separator {
-      flex-shrink: 0;
-      width: 88px; }
+    .news-item__description {
+      max-width: 457px; }
+      .news-item__description:nth-child(1) {
+        text-align: right; }
+      .news-item__description a {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-family: 'Gotham Pro Black', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+        text-transform: uppercase;
+        font-size: 21px;
+        color: #f01928;
+        text-decoration: none; }
+        .news-item__description a:hover {
+          cursor: pointer;
+          color: #630460;
+          text-decoration: underline; }
+      .news-item__description p {
+        margin: 0;
+        font-family: 'Gotham Pro', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+        font-size: 16px;
+        color: #606060; }
+      .news-item__description span {
+        font-family: 'Gotham Pro Light', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+        font-size: 14px;
+        color: #474747; }
+    .news-item__pointer {
+      position: absolute;
+      z-index: 5;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%); }
+  .news-finisher {
+    margin: 0 auto;
+    margin-bottom: 50px; }
+
+.--pointer-selected {
+  top: 17px; }
+  .--pointer-selected circle {
+    fill: #630460;
+    stroke: #630460; }
+
+.footer {
+  min-height: 416px;
+  background: url(../img/main/footer/footer_bg.jpg) center no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  .footer-header {
+    margin-top: 50px;
+    color: #ffffff;
+    font-family: 'Gotham Pro Medium', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+    font-size: 18px; }
+  .footer-social {
+    min-width: 546px;
+    display: flex;
+    justify-content: space-between; }
+    .footer-social a {
+      display: inline-block;
+      text-decoration: none;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid #606060;
+      position: relative; }
+      .footer-social a:hover {
+        border: 1px solid #f01928; }
+      .footer-social a svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 22px;
+        height: 22px; }
+        .footer-social a svg path {
+          fill: #606060; }
+        .footer-social a svg polygon {
+          fill: #606060; }
+        .footer-social a svg:hover path {
+          fill: #f01928; }
+        .footer-social a svg:hover polygon {
+          fill: #f01928; }
+  .footer-address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .footer-address p {
+      margin: 0;
+      font-family: 'Gotham Pro Light', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+      font-size: 16px;
+      color: #ffffff;
+      padding: 0 30px; }
+      .footer-address p:nth-child(1) {
+        border-right: 2px solid #f01928; }
+      .footer-address p a {
+        font: inherit;
+        color: inherit;
+        text-decoration: none; }
+  .footer-copyrights span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #606060; }

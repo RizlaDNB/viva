@@ -1,3 +1,12 @@
+//VARS
+$xs: (max-width: 575.98px);
+$sm: (min-width: 576px) and (max-width: 767.98px);
+$md: (min-width: 768px) and (max-width: 970.98px);
+$lg: (min-width: 971px) and (max-width: 1199.98px);
+$xl: (min-width: 1200px);
+
+
+
 .service-formula {
     padding-left: 34px;
     padding-right: 150px;
@@ -5,7 +14,23 @@
     padding-bottom: 50px;
 
     background: url(../img/main/services/formula.jpg) center no-repeat;
+    background-size: cover;
     box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47);
+
+    @media #{$lg} {
+        padding-left: 10px;
+        padding-right: 70px;
+    }
+
+    @media #{$sm} {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media #{$xs} {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     &-description {
         background-color: rgba(255, 255, 255, 0.85);
@@ -42,10 +67,10 @@
 
         font-size: 18px;
 
-        background-color: #f01928;
-        box-shadow:0 6px 0 rgb(202, 13, 26);
-
-        cursor: pointer;
+        @media #{$sm, $xs} {
+            display: block;
+            margin: 60px auto 0 auto;
+        }
     }
 }
 
@@ -61,7 +86,18 @@
     align-items: center;
 
     background: url(../img/main/services/schedule.jpg) center no-repeat;
+    background-size: cover;
     box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47);
+
+    @media #{$sm} {
+        min-height: 300px;
+    }
+
+    @media #{$xs} {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
 
     &-description {
         text-align: left;
@@ -76,6 +112,11 @@
             font-size: 24px;
             color: #f01928;
             text-transform: uppercase;
+
+            @media #{$lg} {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
         }
     }
 
@@ -86,11 +127,6 @@
         height: 36px;
 
         font-size: 18px;
-
-        background-color: #f01928;
-        box-shadow:0 6px 0 rgb(202, 13, 26);
-
-        cursor: pointer;
     }
 }
 
@@ -106,7 +142,19 @@
     align-items: center;
 
     background: url(../img/main/services/price.jpg) center no-repeat;
+    background-size: cover;
     box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47);
+
+    @media #{$sm} {
+        min-height: 300px;
+    }
+
+    @media #{$xs} {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
 
     &-description {
         width: 100%;
@@ -122,6 +170,11 @@
             font-size: 24px;
             color: #f01928;
             text-transform: uppercase;
+
+            @media #{$lg} {
+                padding-left: 10px;
+                color: #ffffff;
+            }
         }
 
         &__text {
@@ -133,6 +186,10 @@
             font-size: 16px;
             line-height: 1.2;
             color: #ffffff;
+
+            @media #{$lg} {
+                padding-left: 10px;
+            }
         }
     }
 
@@ -143,11 +200,6 @@
         height: 36px;
 
         font-size: 18px;
-
-        background-color: #630460;
-        box-shadow:0 6px 0 #41033f;
-
-        cursor: pointer;
     }
 }
 
@@ -164,6 +216,12 @@
     align-items: center;
 
     background: url(../img/main/services/gym-tour.jpg) center no-repeat;
+    background-size: cover;
     box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47);
+
+    @media #{$sm} {
+        width: 100%;
+        min-height: 300px;
+    }
 }
   

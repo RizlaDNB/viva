@@ -1,3 +1,11 @@
+//VARS
+$xs: (max-width: 575.98px);
+$sm: (min-width: 576px) and (max-width: 767.98px);
+$md: (min-width: 768px) and (max-width: 970.98px);
+$lg: (min-width: 971px) and (max-width: 1199.98px);
+$xl: (min-width: 1200px);
+
+
 .slide {
     position: relative;
 
@@ -32,6 +40,12 @@
             text-shadow: 8.918px 8.03px 1px rgba(34, 31, 31, 0.36);
 
             max-width: 704px;
+
+            @media #{$lg} {
+                font-size: 120px;
+                padding-top: 70px;
+                letter-spacing: 0;
+            }
         }
         &-subtitle {
             margin: 0;
@@ -70,4 +84,9 @@
 
 .--slide-runner {
     background: url(../img/main/landing-slider-img.jpg) center no-repeat;
+    background-size: cover;
+
+    @media #{$xs} {
+        background-position: -800px;
+    }
 }

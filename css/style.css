@@ -1019,11 +1019,23 @@ body {
       .news-finisher {
         display: none; } }
 
-.--pointer-selected {
+.pointer--selected {
   top: 17px; }
-  .--pointer-selected circle {
+  .pointer--selected circle {
     fill: #630460;
     stroke: #630460; }
+
+.item--selected::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -39px;
+  border: 15px solid transparent;
+  border-right: 25px solid #630460; }
+
+.item--selected img {
+  border: 2px solid #630460; }
 
 .footer {
   min-height: 416px;

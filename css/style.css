@@ -637,7 +637,8 @@ body {
       padding-top: 0;
       padding-bottom: 0;
       margin-left: -15px;
-      margin-right: -15px; } }
+      margin-right: -15px;
+      margin-top: -30px; } }
   .services-wrapper {
     display: flex;
     justify-content: space-between; }
@@ -724,6 +725,11 @@ body {
     top: -80px;
     right: 40px;
     user-select: none; }
+    @media (max-width: 575.98px) {
+      .features-underlay {
+        right: 0; }
+        .features-underlay img {
+          width: 320px; } }
   .features__header {
     margin: 0;
     margin-bottom: 70px;

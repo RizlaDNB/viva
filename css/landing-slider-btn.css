@@ -1,0 +1,67 @@
+.prev-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  z-index: 999;
+  height: 56px;
+  width: 20px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  cursor: pointer; }
+  .prev-slide:focus {
+    outline: none; }
+  .prev-slide::before, .prev-slide::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -6px;
+    width: 30px;
+    height: 2px;
+    background-color: #c2c2c2;
+    transform: rotate(-60deg); }
+  .prev-slide::after {
+    content: '';
+    position: absolute;
+    top: 39px;
+    left: -6px;
+    width: 30px;
+    height: 2px;
+    background-color: #c2c2c2;
+    transform: rotate(60deg); }
+
+.next-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  z-index: 999;
+  height: 56px;
+  width: 20px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  cursor: pointer; }
+  .next-slide:focus {
+    outline: none; }
+  .next-slide::before, .next-slide::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: -6px;
+    width: 30px;
+    height: 2px;
+    background-color: #c2c2c2;
+    transform: rotate(60deg); }
+  .next-slide::after {
+    content: '';
+    position: absolute;
+    top: 39px;
+    right: -6px;
+    width: 30px;
+    height: 2px;
+    background-color: #c2c2c2;
+    transform: rotate(-60deg); }

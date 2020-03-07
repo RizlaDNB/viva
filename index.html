@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Фитнес-клуб VIVA</title>
 
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
@@ -56,11 +58,24 @@
     <section class="landing">
         <div class="landing-slider">
             <div class="slide">
-                <div class="slide-img --slide-runner"></div>
+                <div class="slide-img slide--runner"></div>
 
                 <div class="container">
                     <div class="slide-info">
                         <h1 class="slide-info-title">заряди себя!</h1>
+                        <p class="slide-info-subtitle">Мы предлагаем новую формулу активного и здорового образа жизни. Узнайте подробнее на <a href="http://vivaclub.ru">vivaclub.ru</a></p>
+                        <button class="slide-info-button main-button">
+                            записаться
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-img slide--runner"></div>
+
+                <div class="container">
+                    <div class="slide-info">
+                        <h1 class="slide-info-title">Слайд 2!</h1>
                         <p class="slide-info-subtitle">Мы предлагаем новую формулу активного и здорового образа жизни. Узнайте подробнее на <a href="http://vivaclub.ru">vivaclub.ru</a></p>
                         <button class="slide-info-button main-button">
                             записаться
@@ -118,6 +133,9 @@
     </section>
 
     <section class="features">
+        <div class="features-underlay">
+            <img src="img/main/features/features-underlay1.svg" alt="">
+        </div>
         <div class="container">
             <h2 class="features__header">преимущества клуба</h2>
             <div class="features-wrapper">
@@ -125,15 +143,15 @@
                     <img src="img/main/features/features_frame.png" alt="">
                 </div>
                 <div class="features-content">
-                    <div class="features-content__item medal">
+                    <div class="features-content__item feature--medal">
                         <h3>квалифицированный персонал</h3>
                         <p>Более 13 лет назад Компания «Евросеть» появилась на горизонте молодого российского бизнеса. Как такового рынка сотового ритейла до 1997 года в России практически не существовало. Самым популярным средством связи в 90-ые был пейджер. «Евросеть» не просто стала одним из основателей российского сотового ритейла, Компания дала толчок к его дальнейшему развитию.</p>
                     </div>
-                    <div class="features-content__item notepad">
+                    <div class="features-content__item feature--notepad">
                         <h3>широкий ассортимент</h3>
                         <p>Более 13 лет назад Компания «Евросеть» появилась на горизонте молодого российского бизнеса. Как такового рынка сотового ритейла до 1997 года в России практически не существовало. Самым популярным средством связи в 90-ые был пейджер. «Евросеть» не просто стала одним из основателей российского сотового ритейла, Компания дала толчок к его дальнейшему развитию.</p>
                     </div>
-                    <div class="features-content__item strength">
+                    <div class="features-content__item feature--strength">
                         <h3>привлекательные условия</h3>
                         <p>Более 13 лет назад Компания «Евросеть» появилась на горизонте молодого российского бизнеса. Как такового рынка сотового ритейла до 1997 года в России практически не существовало. Самым популярным средством связи в 90-ые был пейджер. «Евросеть» не просто стала одним из основателей российского сотового ритейла, Компания дала толчок к его дальнейшему развитию.</p>
                     </div>
@@ -145,18 +163,26 @@
     <section class="news">
         <div class="container">
             <h2 class="news__header">новости клуба</h2>
+            <div class="news-logo-overlay">
+                <img src="img/main/news/news-viva-overlay.png" alt="">
+            </div>
             <div class="news-wrapper">
                 <div class="news-item">
                     <div class="news-item__img">
                         <img src="img/main/news/woman.jpg" alt="">
                     </div>
+                    <div class="news-item__separator">
+                        <div class="news-item__separator-left"></div>
+                        <div class="news-item__separator-right"></div>
+                    </div>
                     <div class="news-item__description">
                         <span>14 Октября 2014г.</span>
-                        <a href="#">ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ ДЛЯ ЖЕНЩИН</a>
+                        <a class="news-item__description--desktop" href="#">ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ ДЛЯ ЖЕНЩИН</a>
                         <p>Более 13 лет назад Компания «Евросеть» появилась на горизонте молодого российского бизнеса. Как такового рынка сотового ритейла до 1997 года в России практически не существовало. Самым популярным средством связи в 90-ые был пейджер.</p>
+                        <a class="news-item__description--mobile" href="#">читать далее</a>
                     </div>
                     <div class="news-item__pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                             <circle fill="#d6d6d6" stroke="#8a8f93" stroke-width="2px" cx="9" cy="9" r="8"/>
                         </svg>    
                     </div>
@@ -164,14 +190,19 @@
                 <div class="news-item">
                     <div class="news-item__description">
                         <span>12 Октября 2014г.</span>
-                        <a href="#">Занятия с персональным тренером</a>
+                        <a class="news-item__description--desktop" href="#">Занятия с персональным тренером</a>
                         <p>Более 13 лет назад Компания «Евросеть» появилась на горизонте молодого российского бизнеса. Как такового рынка сотового ритейла до 1997 года в России практически не существовало. Самым популярным средством связи в 90-ые был пейджер.</p>
+                        <a class="news-item__description--mobile" href="#">читать далее</a>
+                    </div>
+                    <div class="news-item__separator">
+                        <div class="news-item__separator-left"></div>
+                        <div class="news-item__separator-right"></div>
                     </div>
                     <div class="news-item__img">
                         <img src="img/main/news/personal.jpg" alt="">
                     </div>
                     <div class="news-item__pointer --pointer-selected">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                             <circle fill="#d6d6d6" stroke="#8a8f93" stroke-width="2px" cx="9" cy="9" r="8"/>
                         </svg>    
                     </div>
@@ -180,13 +211,18 @@
                     <div class="news-item__img">
                         <img src="img/main/news/woman2.jpg" alt="">
                     </div>
+                    <div class="news-item__separator">
+                        <div class="news-item__separator-left"></div>
+                        <div class="news-item__separator-right"></div>
+                    </div>
                     <div class="news-item__description">
                         <span>14 Октября 2014г.</span>
-                        <a href="#">ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ ДЛЯ ЖЕНЩИН</a>
+                        <a class="news-item__description--desktop" href="#">ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ ДЛЯ ЖЕНЩИН</a>
                         <p>Более 13 лет назад Компания «Евросеть» появилась на горизонте молодого российского бизнеса. Как такового рынка сотового ритейла до 1997 года в России практически не существовало. Самым популярным средством связи в 90-ые был пейджер.</p>
+                        <a class="news-item__description--mobile" href="#">читать далее</a>
                     </div>
                     <div class="news-item__pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                             <circle fill="#d6d6d6" stroke="#8a8f93" stroke-width="2px" cx="9" cy="9" r="8"/>
                         </svg>    
                     </div>
@@ -331,5 +367,12 @@
         </div>
         <button class="footer-button alt-button">3D-тур по клубу</button>
     </footer>
+
+
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/landing-slider.js"></script>
 </body>
 </html>

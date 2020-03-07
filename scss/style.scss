@@ -1,6 +1,7 @@
 @import 'fonts.scss';
 @import 'slide.scss';
 @import 'service.scss';
+@import 'landing-slider-btn.scss';
 
 // MIXINS
 @mixin gotham-regular {
@@ -285,12 +286,29 @@ body {
                 content: '';
                 position: absolute;
                 left: -51px;
-                top: 9px;
+                top: 10px;
 
                 height: 9px;
                 width: 51px;
                 background-color: #8a8f93;
                 border-radius: 3px;
+            }
+        }
+    }
+
+    &-mobile-menu--active {
+        button {
+            &::before {
+            background-color: #f01928;
+            }
+
+            &::after {
+            background-color: #f01928;
+            }
+        }
+        span {
+             &::before {
+                background-color: #f01928;
             }
         }
     }
@@ -303,7 +321,6 @@ body {
 
     @media #{$md, $sm, $xs} {
         display: none;
-        // height: 259px;
         height: 0;
 
         position: absolute;
@@ -314,6 +331,12 @@ body {
         background-size: cover;
         background-color: #dedede;
     }
+
+    &--active {
+        display: block;
+        height: 259px;
+    }
+
     &-menu {
     
         ul {
@@ -391,7 +414,38 @@ body {
 
 
 .landing {
-    &-slider {}
+    &-slider {
+        position: relative;
+    }
+}
+
+.slick-dots {
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 2;
+
+    li {
+        background-color: transparent;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        height: 12px;
+        width: 12px;
+    }
+    button {
+        cursor: none;
+    }
+}
+
+.slick-dots li button:before {
+color: #ffffff;
+height: 12px;
+width: 12px;
+font-size: 0;
+}
+
+.slick-dots li.slick-active button:before {
+color: #ffffff;
+background-color: #ffffff;
 }
 
 
@@ -402,6 +456,8 @@ body {
 
     padding-top: 48px;
     padding-bottom: 50px;
+
+    margin-top: -20px;
 
     @media #{$xs} {
         padding-top: 0;
@@ -487,6 +543,8 @@ body {
     background: url(../img/main/features_bg.jpg) center no-repeat;
     background-size: cover;
 
+    position: relative;
+
     &-wrapper {
         display: flex;
         justify-content: flex-end;
@@ -500,7 +558,12 @@ body {
         right: 15px;
         top: -25px;
 
-        z-index: 2;
+        user-select: none;
+
+        img {
+            width: 680px;
+            height: 625px;
+        }
 
         @media #{$lg} {
             img {
@@ -519,6 +582,14 @@ body {
         @media #{$xs} {
             display: none;
         }
+    }
+    &-underlay {
+        position: absolute;
+        z-index: 0;
+        top: -80px;
+        right: 40px;
+
+        user-select: none;
     }
 
     &__header {
@@ -604,6 +675,7 @@ body {
 
                 @media #{$xs} {
                     margin-top: 160px;
+                    font-size: 20px;
                 }
             }     
     
@@ -622,7 +694,7 @@ body {
     }
 }
 
-.medal {
+.feature--medal {
     h3 {
         &::before {
             content: '';
@@ -644,7 +716,7 @@ body {
     }
 }
 
-.notepad {
+.feature--notepad {
     h3 {
         &::before {
             content: '';
@@ -666,7 +738,7 @@ body {
     }
 }
 
-.strength {
+.feature--strength {
     h3 {
         &::before {
             content: '';
@@ -696,6 +768,46 @@ body {
     background: url(../img/main/news/news_bg.jpg) top no-repeat;
     background-size: cover;
 
+    position: relative;
+
+    &-logo-overlay {
+        position: absolute;
+
+        top: -117px;
+        right: 0;
+        opacity: 0.17;
+
+        user-select: none;
+
+        @media #{$lg} {
+            top: -90px;
+
+            img {
+                height: 180px;
+            }
+        }
+
+        @media #{$md} {
+            top: -70px;
+
+            img {
+                height: 140px;
+            }
+        }
+
+        @media #{$sm} {
+            top: -50px;
+
+            img {
+                height: 100px;
+            }
+        }
+
+        @media #{$xs} {
+            display: none;
+        }
+    }
+
     &__header {
         margin: 0;
         margin-bottom: 48px;
@@ -706,6 +818,7 @@ body {
         text-transform: uppercase;
 
         position: relative;
+        z-index: 1;
 
         &::after {
             content: '';
@@ -726,60 +839,99 @@ body {
 
         display: flex;
         flex-direction: column;
-
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-
-            width: 2px;
-            height: 90%;
-            background-color: #8a8f93;
-
-            @media #{$lg} {
-                height: 89.6%;
-            }
-        }
     }
 
     &-item {
-        margin-bottom: 30px;
+        padding-bottom: 30px;
 
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
 
         position: relative;
 
+        @media #{$xs} {
+            flex-wrap: wrap;
+
+            border: 2px solid #8a8f93;
+
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
         &__img {
-            flex-shrink: 0;
-            overflow: hidden;
+            flex-basis: 50%;
+
+            max-width: 100%;
+
+            position: relative;
+
+            @media #{$xs} {
+                flex-basis: 100%;
+
+                border-bottom: 2px solid #8a8f93;
+
+                order: -2;
+            }
 
             img {
                 object-fit: cover;
-                width: 457px;
+                object-position: center;
 
-                @media #{$lg} {
-                    width: 426px;
+                max-width: 100%;
+                min-height: 100%;
+
+                border: 2px solid #8a8f93;
+
+                &:hover {
+                    border: 2px solid #630460;
+                }
+
+                @media #{$xs} {
+                    border: none;
+                    width: 100%;
+
+                    &:hover {
+                        border: none;
+                    }
                 }
             }
         }
-        &__description {
-            width: 457px;
+        &__separator {
+            flex-shrink: 0;
+            display: flex;
+            margin-bottom: -30px;
 
-            @media #{$lg} {
-                width: 426px;
+            @media #{$xs} {
+                display: none;
+            }
+
+            &-left {
+                width: 39px;
+                height: 100%;
+            }
+            &-right {
+                width: 39px;
+                height: 100%;
+                border-left: 2px solid #8a8f93;
+            }
+        }
+        &__description {
+            flex-basis: 50%;
+            flex-shrink: 1;
+
+            @media #{$xs} {
+                flex-basis: 100%;
             }
 
             &:nth-child(1) {
                 text-align: right;
+
+                @media #{$xs} {
+                    text-align: left;
+                }
             }
 
-            a {
+            &--desktop {
                 display: inline-block;
                 margin-bottom: 10px;
 
@@ -790,6 +942,13 @@ body {
                 color: #f01928;
                 text-decoration: none;
 
+                @media #{$xs} {
+                    display: block;
+                    border-top: 2px solid #8a8f93;
+
+                    padding: 10px;
+                }
+
                 &:hover {
                     cursor: pointer;
 
@@ -798,17 +957,50 @@ body {
                 }
             }
 
+            &--mobile {
+                margin-top: 15px;
+                margin-right: 15px;
+
+                text-align: right;
+                @include gotham-bold();
+                font-size: 18px;
+                color: #474747;
+                text-transform: uppercase;
+
+                @media #{$xl, $lg, $md, $sm} {
+                    display: none;
+                }
+
+                @media #{$xs} {
+                    display: block;
+                }
+
+                &:hover {
+                    color: #630460;
+                }
+            }
+
             p {
                 margin: 0;
                 @include gotham-regular();
                 font-size: 16px;
                 color: #606060;
+
+                @media #{$xs} {
+                    padding: 10px;
+                }
             }
 
             span {
                 @include gotham-light();
                 font-size: 14px;
                 color: #474747;
+
+                @media #{$xs} {
+                    display: inline-block;
+
+                    padding: 10px;
+                }
             }
         }
         &__pointer {
@@ -817,7 +1009,11 @@ body {
 
             top: 0px;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-9px);
+
+            @media #{$xs} {
+                display: none;
+            }
         }
     }
 
@@ -825,6 +1021,10 @@ body {
         margin: 0 auto;
 
         margin-bottom: 50px;
+
+        @media #{$xs} {
+            display: none;
+        }
     }
 }
 
@@ -860,7 +1060,15 @@ body {
         min-width: 546px;
 
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+
+        @media #{$xs} {
+            min-width: 320px;
+            padding-left: 15px;
+            padding-right: 15px;
+            flex-wrap: wrap;
+        }
 
         a {
             display: inline-block;
@@ -868,12 +1076,12 @@ body {
             width: 52px;
             height: 52px;
             border-radius: 50%;
-            // border: 1px solid #606060;
 
             position: relative;
 
-            &:hover {
-                // border: 1px solid #f01928;
+            @media #{$xs} {
+                flex-basis: 25%;
+                margin-bottom: 15px;
             }
 
             svg {
@@ -921,6 +1129,11 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
+        @media #{$xs} {
+            text-align: center;
+        }
+
         p {
             margin: 0;
             @include gotham-light();
@@ -928,8 +1141,16 @@ body {
             color: #ffffff;
             padding: 0 30px;
 
+            @media #{$xs} {
+                flex-basis: 100%;
+            }
+
             &:nth-child(1) {
                 border-right: 2px solid #f01928;
+
+                @media #{$xs} {
+                    border-right: none;
+                }
             }
 
             a {

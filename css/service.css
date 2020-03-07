@@ -5,7 +5,9 @@
   padding-bottom: 50px;
   background: url(../img/main/services/formula.jpg) center no-repeat;
   background-size: cover;
-  box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47); }
+  box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47);
+  position: relative;
+  z-index: 1; }
   @media (max-width: 1199.98px) {
     .service-formula {
       padding-left: 10px;
@@ -58,7 +60,9 @@
   align-items: center;
   background: url(../img/main/services/schedule.jpg) center no-repeat;
   background-size: cover;
-  box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47); }
+  box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47);
+  position: relative;
+  z-index: 1; }
   @media (max-width: 767.98px) {
     .service-schedule {
       min-height: 300px; } }
@@ -97,7 +101,9 @@
   align-items: center;
   background: url(../img/main/services/price.jpg) center no-repeat;
   background-size: cover;
-  box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47); }
+  box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47);
+  position: relative;
+  z-index: 1; }
   @media (max-width: 767.98px) {
     .service-price {
       min-height: 300px; } }
@@ -149,7 +155,9 @@
   align-items: center;
   background: url(../img/main/services/gym-tour.jpg) center no-repeat;
   background-size: cover;
-  box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47); }
+  box-shadow: 0px 0px 9.7px 0.3px rgba(37, 37, 37, 0.47);
+  position: relative;
+  z-index: 1; }
   @media (max-width: 767.98px) {
     .service-tour {
       width: 100%;

@@ -30,6 +30,8 @@ $xl: (min-width: 1200px);
     @media #{$xs} {
         padding-left: 15px;
         padding-right: 15px;
+        padding-top: 20px;
+        padding-bottom: 30px;
     }
 
     &-description {
@@ -69,7 +71,7 @@ $xl: (min-width: 1200px);
 
         @media #{$sm, $xs} {
             display: block;
-            margin: 60px auto 0 auto;
+            margin: 20px auto 0 auto;
         }
     }
 }

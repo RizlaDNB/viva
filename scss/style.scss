@@ -92,6 +92,10 @@ body {
 
         padding-top: 25px;
         padding-bottom: 25px;
+
+        @media #{$xs} {
+            justify-content: center;
+        }
     }
 
     &-logo {
@@ -227,9 +231,15 @@ body {
 
     &-mobile-menu {
         display: none;
+        position: relative;
 
         @media #{$md, $sm, $xs} {
             display: block;
+        }
+
+        @media #{$xs} {
+            position: absolute;
+            left: 15px;
         }
 
         button {
@@ -494,9 +504,20 @@ body {
 
         @media #{$lg} {
             img {
-                height: 782px;
+                height: 760px;
                 width: 570px;
             }
+        }
+
+        @media #{$sm} {
+            img {
+                height: 890px;
+                width: 500px;
+            }
+        }
+
+        @media #{$xs} {
+            display: none;
         }
     }
 
@@ -510,6 +531,10 @@ body {
         text-transform: uppercase;
 
         position: relative;
+
+        @media #{$xs} {
+            margin-bottom: 0px;
+        }
 
         &::after {
             content: '';
@@ -526,6 +551,11 @@ body {
 
     &-content {
         margin-bottom: 60px;
+
+        @media #{$xs} {
+            max-width: 100%;
+        }
+
         &__item {
             position: relative;
             max-width: 520px;
@@ -534,13 +564,32 @@ body {
 
             &:nth-child(2) {
                 right: 65px;
+
+                @media #{$xs} {
+                    right: 0;
+                }
             }
             &:nth-child(1) {
                 right: 90px;
+
+                @media #{$xs} {
+                    right: 0;
+                }
             }
 
             @media #{$lg} {
                 max-width: 420px;
+            }
+
+            @media #{$sm} {
+                max-width: 350px;
+            }
+
+            @media #{$xs} {
+                max-width: 100%;
+                right: 0;
+
+                text-align: center;
             }
     
             h3 {
@@ -552,6 +601,10 @@ body {
                 text-transform: uppercase;
                 line-height: 1.2;
                 color: #f01928;
+
+                @media #{$xs} {
+                    margin-top: 160px;
+                }
             }     
     
             p {
@@ -581,6 +634,12 @@ body {
             height: 100px;
 
             background: url(../img/main/features/medal.png) center no-repeat;
+
+            @media #{$xs} {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -120px;
+            }
         }
     }
 }
@@ -597,6 +656,12 @@ body {
             height: 100px;
 
             background: url(../img/main/features/notepad.png) center no-repeat;
+
+            @media #{$xs} {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -120px;
+            }
         }
     }
 }
@@ -613,6 +678,12 @@ body {
             height: 100px;
 
             background: url(../img/main/features/strength.png) center no-repeat;
+
+            @media #{$xs} {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -120px;
+            }
         }
     }
 }
@@ -797,12 +868,12 @@ body {
             width: 52px;
             height: 52px;
             border-radius: 50%;
-            border: 1px solid #606060;
+            // border: 1px solid #606060;
 
             position: relative;
 
             &:hover {
-                border: 1px solid #f01928;
+                // border: 1px solid #f01928;
             }
 
             svg {
@@ -811,8 +882,8 @@ body {
                 left: 50%;
                 transform: translateX(-50%) translateY(-50%);
 
-                width: 22px;
-                height: 22px;
+                width: 52px;
+                height: 52px;
 
                 path {
                     fill: #606060;

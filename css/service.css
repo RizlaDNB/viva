@@ -17,7 +17,9 @@
   @media (max-width: 575.98px) {
     .service-formula {
       padding-left: 15px;
-      padding-right: 15px; } }
+      padding-right: 15px;
+      padding-top: 20px;
+      padding-bottom: 30px; } }
   .service-formula-description {
     background-color: rgba(255, 255, 255, 0.85);
     padding: 24px 20px; }
@@ -45,7 +47,7 @@
     @media (max-width: 767.98px), (max-width: 575.98px) {
       .service-formula-button {
         display: block;
-        margin: 60px auto 0 auto; } }
+        margin: 20px auto 0 auto; } }
 
 .service-schedule {
   flex-basis: 50%;

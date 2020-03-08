@@ -976,6 +976,10 @@ background-color: #ffffff;
                 color: #474747;
                 text-transform: uppercase;
 
+                &:hover, &:focus {
+                    color: #630460;
+                }
+
                 @media #{$xl, $lg, $md, $sm} {
                     display: none;
                 }
@@ -984,9 +988,7 @@ background-color: #ffffff;
                     display: block;
                 }
 
-                &:hover {
-                    color: #630460;
-                }
+                
             }
 
             p {
@@ -1055,10 +1057,18 @@ background-color: #ffffff;
 
         border: 15px solid transparent;
         border-right: 25px solid #630460;
+
+        @media #{$xs} {
+            display: none;
+        }
     }
 
     img {
         border: 2px solid #630460;
+
+        @media #{$xs} {
+            border: none;
+        }
     }
 }
 

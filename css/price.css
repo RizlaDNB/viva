@@ -56,7 +56,9 @@
     margin-bottom: -12px; }
 
 .price-discount {
-  background-color: #f01928; }
+  background-color: #f01928;
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 .discount {
   position: relative;

@@ -2,6 +2,7 @@
 @import 'slide.scss';
 @import 'service.scss';
 @import 'landing-slider-btn.scss';
+@import 'price.scss';
 
 // MIXINS
 @mixin gotham-regular {
@@ -74,6 +75,26 @@ body {
 
     &:hover, &:focus {
         background-color: #630460;
+    }
+}
+
+.main-header {
+    text-align: center;
+    @include gotham-bold();
+    font-size: 31px;
+    text-transform: uppercase;
+
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        height: 6px;
+        width: 96px;
+        background-color: #f01928;
     }
 }
 
@@ -605,27 +626,8 @@ background-color: #ffffff;
         margin: 0;
         margin-bottom: 70px;
 
-        text-align: center;
-        @include gotham-bold();
-        font-size: 31px;
-        text-transform: uppercase;
-
-        position: relative;
-
         @media #{$xs} {
             margin-bottom: 0px;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            height: 6px;
-            width: 96px;
-            background-color: #f01928;
         }
     }
 
@@ -821,25 +823,7 @@ background-color: #ffffff;
         margin: 0;
         margin-bottom: 48px;
 
-        text-align: center;
-        @include gotham-bold();
-        font-size: 31px;
-        text-transform: uppercase;
-
-        position: relative;
         z-index: 1;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            height: 6px;
-            width: 96px;
-            background-color: #f01928;
-        }
     }
 
     &-wrapper {

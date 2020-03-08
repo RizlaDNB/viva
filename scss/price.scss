@@ -102,24 +102,23 @@
 
     &-percent {
         position: relative;
-        width: 180px;
-        height: 180px;
+        width: 210px;
+        height: 210px;
 
-        svg {
+        .ten {
             position: relative;
-            width: 180px;
-            height: 180px;
+            width: 210px;
+            height: 210px;
+            transform: rotate(90deg);
 
             circle {
-                width: 180px;
-                height: 180px;
                 fill: none;
-                stroke-width: 10;
+                stroke-width: 16;
                 stroke: #ffffff;
                 transform: translate(5px, 5px);
 
-                stroke-dasharray: 486;
-                stroke-dashoffset: 540;
+                stroke-dasharray: 565.48;
+                stroke-dashoffset: 0;
 
                 &:nth-child(1) {
                     stroke-dashoffset: 0;
@@ -127,7 +126,61 @@
                 }
 
                 &:nth-child(2) {
-                    stroke-dashoffset: calc(540 - (540 * 10) / 100);
+                    stroke-dashoffset: 514.5868;
+                    stroke: #ffffff;
+                }
+            }
+        }
+
+        .sixty {
+            position: relative;
+            width: 210px;
+            height: 210px;
+            transform: rotate(90deg);
+
+            circle {
+                fill: none;
+                stroke-width: 16;
+                stroke: #ffffff;
+                transform: translate(5px, 5px);
+
+                stroke-dasharray: 565.48;
+                stroke-dashoffset: 0;
+
+                &:nth-child(1) {
+                    stroke-dashoffset: 0;
+                    stroke: #ff5763;
+                }
+
+                &:nth-child(2) {
+                    stroke-dashoffset: 231.8468;
+                    stroke: #ffffff;
+                }
+            }
+        }
+
+        .thirty {
+            position: relative;
+            width: 210px;
+            height: 210px;
+            transform: rotate(90deg);
+
+            circle {
+                fill: none;
+                stroke-width: 16;
+                stroke: #ffffff;
+                transform: translate(5px, 5px);
+
+                stroke-dasharray: 565.48;
+                stroke-dashoffset: 0;
+
+                &:nth-child(1) {
+                    stroke-dashoffset: 0;
+                    stroke: #ff5763;
+                }
+
+                &:nth-child(2) {
+                    stroke-dashoffset: 401.4908;
                     stroke: #ffffff;
                 }
             }

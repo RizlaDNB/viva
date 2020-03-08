@@ -413,26 +413,61 @@
   align-items: center; }
   .discount-percent {
     position: relative;
-    width: 180px;
-    height: 180px; }
-    .discount-percent svg {
+    width: 210px;
+    height: 210px; }
+    .discount-percent .ten {
       position: relative;
-      width: 180px;
-      height: 180px; }
-      .discount-percent svg circle {
-        width: 180px;
-        height: 180px;
+      width: 210px;
+      height: 210px;
+      transform: rotate(90deg); }
+      .discount-percent .ten circle {
         fill: none;
-        stroke-width: 10;
+        stroke-width: 16;
         stroke: #ffffff;
         transform: translate(5px, 5px);
-        stroke-dasharray: 486;
-        stroke-dashoffset: 540; }
-        .discount-percent svg circle:nth-child(1) {
+        stroke-dasharray: 565.48;
+        stroke-dashoffset: 0; }
+        .discount-percent .ten circle:nth-child(1) {
           stroke-dashoffset: 0;
           stroke: #ff5763; }
-        .discount-percent svg circle:nth-child(2) {
-          stroke-dashoffset: calc(540 - (540 * 10) / 100);
+        .discount-percent .ten circle:nth-child(2) {
+          stroke-dashoffset: 514.5868;
+          stroke: #ffffff; }
+    .discount-percent .sixty {
+      position: relative;
+      width: 210px;
+      height: 210px;
+      transform: rotate(90deg); }
+      .discount-percent .sixty circle {
+        fill: none;
+        stroke-width: 16;
+        stroke: #ffffff;
+        transform: translate(5px, 5px);
+        stroke-dasharray: 565.48;
+        stroke-dashoffset: 0; }
+        .discount-percent .sixty circle:nth-child(1) {
+          stroke-dashoffset: 0;
+          stroke: #ff5763; }
+        .discount-percent .sixty circle:nth-child(2) {
+          stroke-dashoffset: 231.8468;
+          stroke: #ffffff; }
+    .discount-percent .thirty {
+      position: relative;
+      width: 210px;
+      height: 210px;
+      transform: rotate(90deg); }
+      .discount-percent .thirty circle {
+        fill: none;
+        stroke-width: 16;
+        stroke: #ffffff;
+        transform: translate(5px, 5px);
+        stroke-dasharray: 565.48;
+        stroke-dashoffset: 0; }
+        .discount-percent .thirty circle:nth-child(1) {
+          stroke-dashoffset: 0;
+          stroke: #ff5763; }
+        .discount-percent .thirty circle:nth-child(2) {
+          stroke-dashoffset: 401.4908;
           stroke: #ffffff; }
     .discount-percent__number {
       position: absolute;

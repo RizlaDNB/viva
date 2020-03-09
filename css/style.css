@@ -675,7 +675,8 @@
       justify-content: center;
       position: absolute;
       top: 50%;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      z-index: 3; }
       .about-slider-controls__pointer:hover circle, .about-slider-controls__pointer:focus circle {
         stroke: #f01928; }
 
@@ -684,6 +685,12 @@
 
 .arrow--right span::after {
   transform: translateX(-50%) rotate(-45deg); }
+
+.pointers-wrapper {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #8a8f93; }
 
 .pointer--2010 {
   left: 14%; }

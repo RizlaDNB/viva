@@ -343,11 +343,6 @@
     background-color: #c2c2c2;
     transform: rotate(-60deg); }
 
-.container-main {
-  max-width: 1140px;
-  padding: 0 15px;
-  margin: 0 auto; }
-
 .price-offer {
   background: url(../img/main/services_bg.jpg) center no-repeat;
   background-size: cover;
@@ -511,34 +506,76 @@
     font-size: 20px;
     font-family: 'Gotham Pro Black', Arial, Helvetica, 'Nimbus Sans L', sans-serif; }
 
-.container-main {
-  max-width: 1140px;
-  padding: 0 15px;
-  margin: 0 auto; }
-
-.color {
-  background-color: rgba(0, 0, 0, 0.3);
-  border: 2px rgba(0, 0, 0, 0.6) solid; }
-
 .gallery {
   background: url(../img/main/services_bg.jpg) center no-repeat;
   background-size: cover;
-  padding-top: 40px;
   padding-bottom: 40px; }
+  .gallery__header {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  .gallery__filter {
+    margin-bottom: 26px; }
+    .gallery__filter ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0; }
+      .gallery__filter ul li button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: 'Gotham Pro Medium', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+        font-size: 16px;
+        color: #606060;
+        text-transform: uppercase;
+        padding: 10px; }
+        .gallery__filter ul li button:hover {
+          color: #f01928; }
 
 .photo {
-  padding-bottom: 32px; }
-  .photo--lg img {
-    height: 400px; }
-  .photo--md img {
-    height: 400px; }
-  .photo--sm img {
-    height: 184px; }
+  position: relative; }
+  .photo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    background-color: rgba(111, 11, 22, 0.5);
+    opacity: 0;
+    transition: all 1s ease; }
+  .photo::after {
+    content: attr(data-content);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gotham Pro Medium', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 1s ease; }
+  .photo:hover::before, .photo:hover::after {
+    opacity: 1;
+    transition: opacity 1s ease; }
+  .photo:hover::before {
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease; }
+  .photo img {
+    width: 100%; }
 
 body {
   background-color: #dedede; }
 
 .container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.container-main {
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto; }

@@ -32,6 +32,12 @@ $xl: (min-width: 1200px);
 
 
 
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #dedede;
 }

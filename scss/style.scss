@@ -4,6 +4,7 @@
 @import 'landing-slider-btn.scss';
 @import 'price.scss';
 @import 'gallery.scss';
+@import 'about.scss';
 
 // MIXINS
 @mixin gotham-regular {
@@ -40,13 +41,6 @@ $xl: (min-width: 1200px);
 
 body {
     background-color: #dedede;
-}
-
-.container {
-    max-width: 1140px;
-
-    padding: 0 15px;
-    margin: 0 auto;
 }
 
 .container-main {
@@ -453,35 +447,6 @@ body {
     &-slider {
         position: relative;
     }
-}
-
-.slick-dots {
-    bottom: 20px;
-    cursor: pointer;
-    z-index: 2;
-
-    li {
-        background-color: transparent;
-        border-radius: 50%;
-        border: 2px solid #ffffff;
-        height: 12px;
-        width: 12px;
-    }
-    button {
-        cursor: none;
-    }
-}
-
-.slick-dots li button:before {
-color: #ffffff;
-height: 12px;
-width: 12px;
-font-size: 0;
-}
-
-.slick-dots li.slick-active button:before {
-color: #ffffff;
-background-color: #ffffff;
 }
 
 

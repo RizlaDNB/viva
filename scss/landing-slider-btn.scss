@@ -82,3 +82,34 @@
         transform: rotate(-60deg);
     }
 }
+
+
+
+.slick-dots {
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 2;
+
+    li {
+        background-color: transparent;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        height: 12px;
+        width: 12px;
+    }
+    button {
+        cursor: none;
+    }
+}
+
+.slick-dots li button:before {
+color: #ffffff;
+height: 12px;
+width: 12px;
+font-size: 0;
+}
+
+.slick-dots li.slick-active {
+color: #ffffff;
+background-color: #ffffff;
+}

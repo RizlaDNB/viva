@@ -343,6 +343,29 @@
     background-color: #c2c2c2;
     transform: rotate(-60deg); }
 
+.slick-dots {
+  bottom: 20px;
+  cursor: pointer;
+  z-index: 2; }
+  .slick-dots li {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    height: 12px;
+    width: 12px; }
+  .slick-dots button {
+    cursor: none; }
+
+.slick-dots li button:before {
+  color: #ffffff;
+  height: 12px;
+  width: 12px;
+  font-size: 0; }
+
+.slick-dots li.slick-active {
+  color: #ffffff;
+  background-color: #ffffff; }
+
 .price-offer {
   background: url(../img/main/services_bg.jpg) center no-repeat;
   background-size: cover;
@@ -578,6 +601,127 @@
   .photo img {
     width: 100%; }
 
+.about {
+  background: url(../img/main/services_bg.jpg) center no-repeat;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .about-header h1 {
+    margin-bottom: 50px;
+    margin-top: 0; }
+  .about-slider__image img {
+    max-width: 100%;
+    height: auto; }
+  .about-slider__text h2 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: 'Gotham Pro Black', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+    font-size: 22;
+    text-transform: uppercase;
+    color: #f01928; }
+  .about-slider__text p {
+    margin: 0;
+    font-family: 'Gotham Pro', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+    font-size: 16px;
+    color: #606060; }
+  .about-slider-controls {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
+    .about-slider-controls__arrow {
+      position: relative;
+      display: block;
+      height: 43px;
+      width: 43px;
+      border: none;
+      background-color: transparent;
+      color: transparent;
+      font-size: 6px;
+      padding: 0; }
+      .about-slider-controls__arrow::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 43px;
+        height: 43px;
+        border: 2px solid #8a8f93;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer; }
+      .about-slider-controls__arrow span {
+        position: relative;
+        display: block; }
+        .about-slider-controls__arrow span::before, .about-slider-controls__arrow span::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 14px;
+          height: 2px;
+          background-color: #8a8f93; }
+        .about-slider-controls__arrow span::before {
+          top: -13px;
+          left: 50%;
+          transform: translateX(-50%) rotate(-45deg); }
+        .about-slider-controls__arrow span::after {
+          top: -3px;
+          left: 50%;
+          transform: translateX(-50%) rotate(45deg); }
+    .about-slider-controls__pointer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      .about-slider-controls__pointer:hover circle, .about-slider-controls__pointer:focus circle {
+        stroke: #f01928; }
+
+.arrow--right span::before {
+  transform: translateX(-50%) rotate(45deg); }
+
+.arrow--right span::after {
+  transform: translateX(-50%) rotate(-45deg); }
+
+.pointer--2010 {
+  left: 14%; }
+
+.pointer--2011 {
+  left: 22%; }
+
+.pointer--2012 {
+  left: 30%; }
+
+.pointer--2016 {
+  left: 59%; }
+
+.pointer--2018 {
+  left: 76%; }
+
+.pointer--2020 {
+  left: 87%; }
+
+.pointer--2021 {
+  left: 93%; }
+
+.tour {
+  border-top: 10px solid #f01928;
+  border-bottom: 10px solid #f01928;
+  background: url(../img/about/tour.jpg) center no-repeat;
+  background-size: cover;
+  min-height: 478px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; }
+  .tour button {
+    margin-bottom: -10px;
+    box-shadow: 0px 0px 16.92px 1.08px rgba(34, 31, 31, 0.85); }
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -585,11 +729,6 @@
 
 body {
   background-color: #dedede; }
-
-.container {
-  max-width: 1140px;
-  padding: 0 15px;
-  margin: 0 auto; }
 
 .container-main {
   max-width: 1140px;
@@ -863,29 +1002,6 @@ body {
 
 .landing-slider {
   position: relative; }
-
-.slick-dots {
-  bottom: 20px;
-  cursor: pointer;
-  z-index: 2; }
-  .slick-dots li {
-    background-color: transparent;
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-    height: 12px;
-    width: 12px; }
-  .slick-dots button {
-    cursor: none; }
-
-.slick-dots li button:before {
-  color: #ffffff;
-  height: 12px;
-  width: 12px;
-  font-size: 0; }
-
-.slick-dots li.slick-active button:before {
-  color: #ffffff;
-  background-color: #ffffff; }
 
 .services {
   background: url(../img/main/services_bg.jpg) center no-repeat;

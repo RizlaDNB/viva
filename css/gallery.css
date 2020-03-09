@@ -1,0 +1,23 @@
+.container-main {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.color {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px rgba(0, 0, 0, 0.6) solid; }
+
+.gallery {
+  background: url(../img/main/services_bg.jpg) center no-repeat;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.photo {
+  padding-bottom: 32px; }
+  .photo--lg img {
+    height: 400px; }
+  .photo--md img {
+    height: 400px; }
+  .photo--sm img {
+    height: 184px; }

@@ -343,6 +343,11 @@
     background-color: #c2c2c2;
     transform: rotate(-60deg); }
 
+.container-main {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
 .price-offer {
   background: url(../img/main/services_bg.jpg) center no-repeat;
   background-size: cover;
@@ -371,6 +376,9 @@
   padding-left: 15px;
   padding-right: 15px;
   box-shadow: 0px 0px 10px 3px rgba(52, 52, 52, 0.3); }
+  @media (max-width: 767px) {
+    .offer {
+      margin-bottom: 40px; } }
   .offer__title {
     margin: 0;
     font-family: 'Gotham Pro Bold', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
@@ -384,6 +392,15 @@
       position: absolute;
       top: -10px;
       right: 20%; }
+      @media (max-width: 991px) {
+        .offer__title-currency {
+          right: 10%; } }
+      @media (max-width: 767px) {
+        .offer__title-currency {
+          right: 33%; } }
+      @media (max-width: 575px) {
+        .offer__title-currency {
+          right: 20%; } }
     .offer__title-period {
       display: block;
       font-size: 16px; }
@@ -404,6 +421,9 @@
   background-color: #f01928;
   padding-top: 40px;
   padding-bottom: 40px; }
+  @media (max-width: 767px) {
+    .price-discount {
+      display: none; } }
 
 .discount {
   position: relative;
@@ -490,6 +510,30 @@
     text-transform: uppercase;
     font-size: 20px;
     font-family: 'Gotham Pro Black', Arial, Helvetica, 'Nimbus Sans L', sans-serif; }
+
+.container-main {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.color {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px rgba(0, 0, 0, 0.6) solid; }
+
+.gallery {
+  background: url(../img/main/services_bg.jpg) center no-repeat;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.photo {
+  padding-bottom: 32px; }
+  .photo--lg img {
+    height: 400px; }
+  .photo--md img {
+    height: 400px; }
+  .photo--sm img {
+    height: 184px; }
 
 body {
   background-color: #dedede; }
@@ -743,11 +787,11 @@ body {
         color: #8a8f93;
         font-size: 16px;
         text-transform: uppercase;
-        padding: 24px 20px; }
+        padding: 24px 10px; }
         @media (max-width: 1199.98px) {
           .nav-menu ul li a {
             font-size: 14px;
-            padding: 24px 16px; } }
+            padding: 24px 10px; } }
         @media (max-width: 970.98px), (max-width: 767.98px), (max-width: 575.98px) {
           .nav-menu ul li a {
             padding: 10px 10px;

@@ -9,14 +9,20 @@
     margin-bottom: 26px; }
     .gallery__filter ul {
       list-style: none;
+      display: -webkit-box;
       display: flex;
+      -webkit-box-pack: justify;
       justify-content: space-between;
       margin: 0;
       padding: 0; }
       @media (max-width: 768px) {
         .gallery__filter ul {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
           flex-direction: column;
+          -webkit-box-pack: center;
           justify-content: center;
+          -webkit-box-align: center;
           align-items: center; } }
       .gallery__filter ul li button {
         border: none;
@@ -35,37 +41,52 @@
     display: none; } }
 
 .photo {
-  position: relative; }
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
   .photo::before {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 0%;
     height: 0%;
     background-color: rgba(111, 11, 22, 0.5);
     opacity: 0;
+    -webkit-transition: all 1s ease;
     transition: all 1s ease; }
   .photo::after {
     content: attr(data-content);
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-family: 'Gotham Pro Medium', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
     font-size: 16px;
     color: #ffffff;
     opacity: 0;
+    -webkit-transition: opacity 1s ease;
     transition: opacity 1s ease; }
   .photo:hover::before, .photo:hover::after {
     opacity: 1;
+    -webkit-transition: opacity 1s ease;
     transition: opacity 1s ease; }
   .photo:hover::before {
     width: 100%;
     height: 100%;
+    -webkit-transition: all 1s ease;
     transition: all 1s ease; }
   .photo:hover::after {
+    -webkit-transition-delay: 0.5s;
     transition-delay: 0.5s; }
   .photo img {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center; }
